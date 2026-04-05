@@ -30,6 +30,7 @@ server.tool(
     version: z.string().optional().describe("Specific version to check. If omitted, checks latest."),
     ecosystem: z.enum(["npm", "pypi"]).optional().describe("Package ecosystem. Defaults to npm."),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await checkDependency(params);
@@ -47,6 +48,7 @@ server.tool(
     filePath: z.string().describe("Path to package.json or requirements.txt"),
     includeDevDependencies: z.boolean().optional().describe("Include devDependencies in scan. Defaults to true."),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await auditProject(params);
@@ -64,6 +66,7 @@ server.tool(
     name: z.string().describe("Package name"),
     ecosystem: z.enum(["npm", "pypi"]).optional().describe("Package ecosystem. Defaults to npm."),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await findSafeVersion(params);
@@ -80,6 +83,7 @@ server.tool(
   {
     vulnId: z.string().describe("Vulnerability ID (e.g., 'GHSA-jf85-cpcp-j695' or 'CVE-2021-23337')"),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await getAdvisoryDetail(params);
@@ -96,6 +100,7 @@ server.tool(
   {
     name: z.string().describe("npm package name"),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await checkNpmHealth(params);
@@ -113,6 +118,7 @@ server.tool(
     name: z.string().describe("Package name to find alternatives for"),
     reason: z.string().optional().describe("Why an alternative is needed (e.g., 'deprecated', 'vulnerable', 'unmaintained')"),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await suggestAlternative(params);
@@ -131,6 +137,7 @@ server.tool(
     version: z.string().optional().describe("Specific version to scan. If omitted, scans latest."),
     depth: z.number().min(1).max(2).optional().describe("How deep to scan: 1 = direct deps only (default), 2 = deps of deps."),
   },
+  { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   async (params) => {
     try {
       const text = await deepScan(params);
