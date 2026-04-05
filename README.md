@@ -7,8 +7,8 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/depshield-mcp"><img src="https://img.shields.io/npm/v/depshield-mcp?style=flat-square&color=cb3837&label=npm" alt="npm version" /></a>
   <a href="https://www.npmjs.com/package/depshield-mcp"><img src="https://img.shields.io/npm/dm/depshield-mcp?style=flat-square&color=blue&label=downloads" alt="npm downloads" /></a>
-  <a href="https://github.com/devanshkaria88/depshield-mcp/blob/main/LICENSE"><img src="https://img.shields.io/github/license/devanshkaria88/depshield-mcp?style=flat-square" alt="license" /></a>
-  <a href="https://github.com/devanshkaria88/depshield-mcp"><img src="https://img.shields.io/github/stars/devanshkaria88/depshield-mcp?style=flat-square" alt="GitHub stars" /></a>
+  <a href="https://github.com/erkexzcx/depshield-mcp/blob/main/LICENSE"><img src="https://img.shields.io/github/license/erkexzcx/depshield-mcp?style=flat-square" alt="license" /></a>
+  <a href="https://github.com/erkexzcx/depshield-mcp"><img src="https://img.shields.io/github/stars/erkexzcx/depshield-mcp?style=flat-square" alt="GitHub stars" /></a>
   <img src="https://img.shields.io/badge/node-%3E%3D22-brightgreen?style=flat-square" alt="node version" />
 </p>
 
@@ -59,7 +59,7 @@ Add to your IDE's MCP configuration and you're done. No global install needed.
 ### Option 2: Clone and build
 
 ```bash
-git clone https://github.com/devanshkaria88/depshield-mcp.git
+git clone https://github.com/erkexzcx/depshield-mcp.git
 cd depshield-mcp
 npm install
 npm run build
